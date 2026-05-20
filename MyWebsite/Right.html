@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Danh mục bên phải</title>
+</head>
+<body>
+
+    <p><b>SÁCH BÁN NHIỀU</b></p>
+    
+    <!-- Khung chữ chạy marquee: rê chuột vào (onMouseMove) thì dừng (stop), đưa chuột ra (onMouseOut) thì chạy tiếp (start) -->
+
+    
+    <marquee direction="up" scrollamount="3" scrolldelay="100" onMouseMove="this.stop()" onMouseOut="this.start()" height="250">
+        <!-- 1. Sách VB6 đi với images2.png -->
+        <div class="marquee-item">
+            <img src="Images/images2.png" width="45" height="60" alt="Sách VB6">
+            <a href="#">Thủ Thuật Lập Trình Visual Basic 6</a>
+        </div>
+        <!-- 2. Sách Photoshop CS đi với images3.png -->
+        <div class="marquee-item">
+            <img src="Images/images3.png" width="45" height="60" alt="Sách PTS">
+            <a href="#">Hướng Dẫn Tự Học Photoshop CS</a>
+        </div>
+        <!-- 3. Sách Căn bản PTS đi với images4.png -->
+        <div class="marquee-item">
+            <img src="Images/images4.png" width="45" height="60" alt="Sách Căn bản PTS">
+            <a href="#">Căn Bản Về Photoshop CS</a>
+        </div>
+        <!-- 4. Sách Tin học Cơ bản đi với images1.png -->
+        <div class="marquee-item">
+            <img src="Images/images1.png" width="45" height="60" alt="Sách Tin học">
+            <a href="#">Tin học Cơ bản</a>
+        </div>
+    </marquee>
+
+    <p><b>LIÊN KẾT WEBSITE</b></p>
+    <!-- Thanh chọn liên kết: khi bấm chọn sẽ tự động mở tab mới dẫn đến website trường -->
+    <select onchange="if(this.value) window.open(this.value,'_blank')"> 
+        <option selected value="">--- Chọn trang liên kết ---</option>
+        <option value="http://vlu.edu.vn">ĐH Văn Lang</option>
+        <option value="https://vlu.edu.vn">Khoa KT-CN</option>
+    </select>
+
+    <p><b>THỐNG KÊ TRUY CẬP</b></p>
+    <p>Tổng truy cập: 160</p>
+    <p>Đang online: 3</p>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <title>Chi tiết sản phẩm</title>
+    <script>
+        function toggleDetails() {
+            var detailRow = document.getElementById("detail-row");
+            var btnText = document.getElementById("btn-toggle");
+            
+            if (detailRow.style.display === "none") {
+                detailRow.style.display = "table-row";
+                btnText.innerHTML = "ẨN CHI TIẾT"; // Đã bỏ icon 🙈
+            } else {
+                detailRow.style.display = "none";
+                btnText.innerHTML = "XEM CHI TIẾT"; // Đã bỏ icon 🔍
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <table width="500" border="1" cellspacing="0" align="center" style="margin-top: 20px; font-family: Arial, sans-serif;">
+        <tr bgcolor="#f0f0f0">
+            <td colspan="2" align="center">
+                <b><font size="6" color="blue">GIÁO TRÌNH TIN HỌC CƠ BẢN</font></b>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="6" width="200" align="center">
+                <img src="Images/images1.png" alt="Giáo trình Windows XP" width="180">
+            </td>
+            <td>Tác giả: <i>Phạm Công Anh</i></td>
+        </tr>
+        <tr><td>Đồng tác giả: <i>Lê Việt Nhân</i></td></tr>
+        <tr><td>Hiệu đính: <font color="purple">Hồng Phúc</font></td></tr>
+        <tr><td>Chủ biên: <i>Quách Tuấn Ngọc</i></td></tr>
+        <tr><td>Nhà xuất bản: <font color="red">Nhà xuất bản Trẻ</font></td></tr>
+        <tr><td>Chủ đề: <b>Triết học - Chính trị</b></td></tr>
+        
+        <tr id="detail-row" style="display: none; background-color: #fafafa;">
+            <td colspan="2" style="padding: 10px 15px;">
+                <p><b>Nội dung của cuốn:</b></p>
+                <p>Tin Học Cơ Bản Windows XP gồm có 7 chương:<br>
+                Chương 1: Một số vấn đề cơ bản.<br>
+                Chương 2: Sử dụng thanh công cụ và thanh thực đơn trong My Computer và Windows Explorer.<br>
+                Chương 3: Các thao tác trong windows XP.<br>
+                Chương 4: Các thiết lập trong Windows XP.<br>
+                Chương 5: Bảo trì máy tính.<br>
+                Chương 6: Các phím tắt.<br>
+                Chương 7: Hỏi và đáp các thắc mắc.<br>
+                Xin trân trọng giới thiệu cuốn sách cùng bạn.</p>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" align="right" style="padding-right: 10px;">
+                Giá bán: <font color="red"><b>26,000 VNĐ/Cuốn</b></font>
+            </td>
+        </tr>
+        
+        <tr>
+            <td colspan="2" align="center" style="padding: 15px 0;">
+                <!-- Đã bỏ icon 🛒 -->
+                <button style="background-color: orange; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold;">ĐẶT MUA</button>
+                
+                <!-- Đã bỏ icon 🔍 -->
+                <button id="btn-toggle" type="button" onclick="toggleDetails()" style="background-color: #0056b3; color: white; border: none; padding: 10px 20px; cursor: pointer; border-radius: 4px; font-weight: bold; margin-left: 10px;">XEM CHI TIẾT</button>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
